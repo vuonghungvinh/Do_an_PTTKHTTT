@@ -1,0 +1,11 @@
+.add{
+    text-align: right;
+}
+.title{
+    text-align: center;
+}
+.line{
+    clear: both;
+    margin-top: 10px;
+    border-top: 3px solid #4bff00;
+}
