@@ -95,6 +95,9 @@ trait AuthenticatesUsers
     {
         $this->validate($request, [
             $this->loginUsername() => 'required', 'password' => 'required',
+        ], [
+            'email.required' => "Bạn chưa nhập email",
+            'password.required' => 'Bạn chưa nhập mật khẩu'
         ]);
     }
 

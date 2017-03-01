@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use App\Http\Requests;
 use App\Train;
+use App\Schedule;
 use Illuminate\Pagination\Paginator;
 use Illuminate\Pagination\LengthAwarePaginator;
 
@@ -49,6 +50,8 @@ class TrainController extends Controller
     }
     public function delete($id)
     {
+        $schedule = Schedule::where("train_id", "=", $id);
+        $schedule->delete();
         $train = Train::where('id', '=', $id);
         return $train->delete();
     }

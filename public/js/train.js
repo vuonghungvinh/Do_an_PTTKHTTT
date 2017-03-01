@@ -7,7 +7,7 @@ $(document).ready(function(){
 		var self = this;
 		$.confirm({
 		    title: 'Xác nhận!',
-		    content: 'Bạn có muốn xoá '+name+'?',
+		    content: 'Bạn có muốn xoá '+name+' và các lịch trình của tàu này?',
 		    buttons: {
 		        confirm: {
 		        	btnClass: 'btn-danger',
